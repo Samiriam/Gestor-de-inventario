@@ -1,6 +1,8 @@
 
 import React, { useState } from 'react';
 
+import { getBookingsUrl, navigateToBookings } from './utils/wixIntegration';
+
 const MenuIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -19,6 +21,7 @@ const CloseIcon = () => (
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const bookingUrl = getBookingsUrl();
 
   const navLinks = [
     { href: '#inicio', label: 'Inicio' },
@@ -26,6 +29,14 @@ const Header: React.FC = () => {
     { href: '#entradas', label: 'Entradas' },
     { href: '#contacto', label: 'Contacto' },
   ];
+
+  const handleBookingClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    const handled = navigateToBookings();
+    if (handled) {
+      event.preventDefault();
+    }
+    setIsMenuOpen(false);
+  };
 
   return (
     <header className="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
@@ -40,7 +51,11 @@ const Header: React.FC = () => {
             </a>
           ))}
         </nav>
-        <a href="#reservas" className="hidden md:inline-block bg-[#007BFF] text-white font-bold py-2 px-6 rounded-lg hover:bg-blue-700 transition-all duration-300 shadow-md">
+        <a
+          href={bookingUrl}
+          onClick={handleBookingClick}
+          className="hidden md:inline-block bg-[#007BFF] text-white font-bold py-2 px-6 rounded-lg hover:bg-blue-700 transition-all duration-300 shadow-md"
+        >
           Reserva
         </a>
         <div className="md:hidden">
@@ -57,7 +72,11 @@ const Header: React.FC = () => {
                 {link.label}
               </a>
             ))}
-            <a href="#reservas" onClick={() => setIsMenuOpen(false)} className="bg-[#007BFF] text-white font-bold py-2 px-6 rounded-lg hover:bg-blue-700 transition-all duration-300 shadow-md">
+            <a
+              href={bookingUrl}
+              onClick={handleBookingClick}
+              className="bg-[#007BFF] text-white font-bold py-2 px-6 rounded-lg hover:bg-blue-700 transition-all duration-300 shadow-md"
+            >
               Reserva
             </a>
           </nav>

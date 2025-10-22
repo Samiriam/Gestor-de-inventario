@@ -1,6 +1,8 @@
 
 import React from 'react';
 
+import { getStoreUrl, navigateToStore } from './utils/wixIntegration';
+
 const SpeechBubble: React.FC<{ children: React.ReactNode; className?: string }> = ({ children, className }) => (
   <div className={`relative bg-white border-2 border-black rounded-full py-2 px-6 shadow-md ${className}`}>
     <p className="text-xl font-bold text-center">{children}</p>
@@ -18,16 +20,22 @@ interface TicketCardProps {
   title: string;
   price: string;
   imageComponent: React.ReactNode;
+  purchaseHref: string;
+  onPurchaseClick: (event: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 
-const TicketCard: React.FC<TicketCardProps> = ({ title, price, imageComponent }) => (
+const TicketCard: React.FC<TicketCardProps> = ({ title, price, imageComponent, purchaseHref, onPurchaseClick }) => (
   <div className="bg-white rounded-2xl p-6 text-center shadow-lg border-2 border-gray-200 flex flex-col items-center">
     <div className="w-32 h-32 flex items-center justify-center mb-4 text-red-500">
         {imageComponent}
     </div>
     <h3 className="text-2xl font-bold mb-2">{title}</h3>
     <p className="text-xl font-semibold text-gray-500 mb-6">{price}</p>
-    <a href="#comprar" className="w-full bg-[#FFD54F] text-[#0D244F] font-bold py-3 px-6 rounded-lg hover:bg-yellow-500 transition-all duration-300 shadow-md transform hover:scale-105">
+    <a
+      href={purchaseHref}
+      onClick={onPurchaseClick}
+      className="w-full bg-[#FFD54F] text-[#0D244F] font-bold py-3 px-6 rounded-lg hover:bg-yellow-500 transition-all duration-300 shadow-md transform hover:scale-105"
+    >
       Comprar
     </a>
   </div>
@@ -35,6 +43,14 @@ const TicketCard: React.FC<TicketCardProps> = ({ title, price, imageComponent })
 
 
 const Tickets: React.FC = () => {
+  const storeUrl = getStoreUrl();
+
+  const handlePurchaseClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    if (navigateToStore()) {
+      event.preventDefault();
+    }
+  };
+
   return (
     <section id="entradas" className="py-16 md:py-24">
       <div className="container mx-auto px-6">
@@ -43,9 +59,9 @@ const Tickets: React.FC = () => {
             <SpeechBubble className="transform rotate-6">¡Ven a divertirte!</SpeechBubble>
         </div>
         <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-          <TicketCard title="Entrada Simple" price="$5.000 CLP" imageComponent={<SuperheroBoy />} />
-          <TicketCard title="Entrada Doble" price="$9.000 CLP" imageComponent={<SuperheroBoy />} />
-          <TicketCard title="Entrada Triple" price="$12.000 CLP" imageComponent={<SuperheroBoy />} />
+          <TicketCard title="Entrada Simple" price="$5.000 CLP" imageComponent={<SuperheroBoy />} purchaseHref={storeUrl} onPurchaseClick={handlePurchaseClick} />
+          <TicketCard title="Entrada Doble" price="$9.000 CLP" imageComponent={<SuperheroBoy />} purchaseHref={storeUrl} onPurchaseClick={handlePurchaseClick} />
+          <TicketCard title="Entrada Triple" price="$12.000 CLP" imageComponent={<SuperheroBoy />} purchaseHref={storeUrl} onPurchaseClick={handlePurchaseClick} />
         </div>
         <div className="text-center mt-8">
           <a href="#politica-compra" className="text-gray-600 hover:text-[#007BFF] underline">

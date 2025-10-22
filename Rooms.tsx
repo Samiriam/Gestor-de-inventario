@@ -1,6 +1,16 @@
 
 import React from 'react';
 
+import { getBookingsUrl, navigateToBookings } from './utils/wixIntegration';
+
+const bookingUrl = getBookingsUrl();
+
+const handleBookingClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+  if (navigateToBookings()) {
+    event.preventDefault();
+  }
+};
+
 interface RoomCardProps {
   imageUrl: string;
   title: string;
@@ -17,7 +27,11 @@ const RoomCard: React.FC<RoomCardProps> = ({ imageUrl, title }) => (
     </div>
     <div className="p-6 bg-white">
       <p className="text-gray-600 mb-4">Decoración temática, juegos y mucha diversión te esperan.</p>
-      <a href="#reservas" className="w-full text-center inline-block bg-[#008C9E] text-white font-bold py-3 px-6 rounded-lg hover:bg-teal-700 transition-all duration-300 shadow-md">
+      <a
+        href={bookingUrl}
+        onClick={handleBookingClick}
+        className="w-full text-center inline-block bg-[#008C9E] text-white font-bold py-3 px-6 rounded-lg hover:bg-teal-700 transition-all duration-300 shadow-md"
+      >
         Reserva Ahora
       </a>
     </div>

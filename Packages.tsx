@@ -1,6 +1,16 @@
 
 import React from 'react';
 
+import { getBookingsUrl, navigateToBookings } from './utils/wixIntegration';
+
+const bookingUrl = getBookingsUrl();
+
+const handleBookingClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+  if (navigateToBookings()) {
+    event.preventDefault();
+  }
+};
+
 interface PackageCardProps {
   title: string;
   price: string;
@@ -26,7 +36,11 @@ const PackageCard: React.FC<PackageCardProps> = ({ title, price, features, highl
         </li>
       ))}
     </ul>
-    <a href="#reservas" className={`w-full text-center inline-block font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-md ${highlight ? 'bg-white text-[#007BFF] hover:bg-gray-200' : 'bg-[#007BFF] text-white hover:bg-blue-700'}`}>
+    <a
+      href={bookingUrl}
+      onClick={handleBookingClick}
+      className={`w-full text-center inline-block font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-md ${highlight ? 'bg-white text-[#007BFF] hover:bg-gray-200' : 'bg-[#007BFF] text-white hover:bg-blue-700'}`}
+    >
       Elegir Paquete
     </a>
   </div>

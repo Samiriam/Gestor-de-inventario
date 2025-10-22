@@ -1,0 +1,13 @@
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #FEFBF6;
+  color: #0D244F;
+}

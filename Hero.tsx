@@ -1,6 +1,8 @@
 
 import React from 'react';
 
+import { getBookingsUrl, navigateToBookings } from './utils/wixIntegration';
+
 const ComicImage: React.FC = () => (
     <div className="relative w-full h-full">
         <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="absolute -top-10 -left-10 w-48 h-48 text-yellow-300 opacity-50">
@@ -28,6 +30,14 @@ const ComicImage: React.FC = () => (
 
 
 const Hero: React.FC = () => {
+  const bookingUrl = getBookingsUrl();
+
+  const handleBookingClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    if (navigateToBookings()) {
+      event.preventDefault();
+    }
+  };
+
   return (
     <section id="inicio" className="container mx-auto px-6 py-16 md:py-24">
       <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -42,7 +52,11 @@ const Hero: React.FC = () => {
             Espacios privados, juego seguro y reservas online con pago en la web. Elige sala y fecha, confirma en minutos.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-            <a href="#reservas" className="bg-[#007BFF] text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+            <a
+              href={bookingUrl}
+              onClick={handleBookingClick}
+              className="bg-[#007BFF] text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+            >
               Reserva Ahora
             </a>
             <a href="#politicas" className="bg-transparent border-2 border-[#007BFF] text-[#007BFF] font-bold py-3 px-8 rounded-lg text-lg hover:bg-[#AEE3FF] hover:text-[#0D244F] transition-all duration-300">
