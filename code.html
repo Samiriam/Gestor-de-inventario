@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Secure Checkout</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#135bec",
+            "background-light": "#f6f6f8",
+            "background-dark": "#101622",
+          },
+          fontFamily: {
+            "display": ["Plus Jakarta Sans", "Noto Sans", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+<div class="flex items-center bg-white dark:bg-background-dark p-4 pb-2 justify-between">
+<div class="text-[#111318] dark:text-white flex size-12 shrink-0 items-center">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h2 class="text-[#111318] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-12">Secure Checkout</h2>
+</div>
+<div class="px-4 pt-6 pb-3">
+<h1 class="text-[#111318] dark:text-white tracking-light text-[32px] font-bold leading-tight text-left">Your Order Summary</h1>
+</div>
+<div class="flex flex-col gap-2 bg-white dark:bg-background-dark pt-2">
+<div class="flex items-center gap-4 bg-white dark:bg-background-dark px-4 min-h-[72px] py-2 justify-between">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-14" data-alt="Superhero themed birthday room" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDaogWlFKSqABJEISk9t7xPeoaC9oZwCDRELQzFGXf7rOdjkp-Nb3odjMm0tQ9bRM0MQPQJGRvdWVdJch6EVbFCP54uWT0opW2-1W0Bb4g46bskQ27KBkKIQUHBATp_wFcJqi3CocEMBkaidGL8Vi2D9Ffkj7zjVVHZyGuh-KxColSc_2bHzHW1RvzIPZMX4NhZe2WwVoqHIubzq95vAaq07EkicPzHp4TcFUyDFW9fm5AEYB7fdKGobOoKE8p6pKe22GxxYi8Em_g");'></div>
+<div class="flex flex-col justify-center">
+<p class="text-[#111318] dark:text-white text-base font-medium leading-normal line-clamp-1">Birthday Room - Superhero Theme</p>
+<p class="text-[#616f89] dark:text-gray-400 text-sm font-normal leading-normal line-clamp-2">1</p>
+</div>
+</div>
+<div class="shrink-0">
+<p class="text-[#111318] dark:text-white text-base font-normal leading-normal">$150.00</p>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-white dark:bg-background-dark px-4 min-h-[72px] py-2 justify-between">
+<div class="flex items-center gap-4">
+<div class="text-[#111318] dark:text-white flex items-center justify-center rounded-lg bg-[#f0f2f4] dark:bg-gray-800 shrink-0 size-12">
+<span class="material-symbols-outlined">confirmation_number</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-[#111318] dark:text-white text-base font-medium leading-normal line-clamp-1">Extra Child Tickets</p>
+<p class="text-[#616f89] dark:text-gray-400 text-sm font-normal leading-normal line-clamp-2">5</p>
+</div>
+</div>
+<div class="shrink-0">
+<p class="text-[#111318] dark:text-white text-base font-normal leading-normal">$50.00</p>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-background-dark p-4">
+<div class="flex justify-between gap-x-6 py-2">
+<p class="text-[#616f89] dark:text-gray-400 text-sm font-normal leading-normal">Subtotal</p>
+<p class="text-[#111318] dark:text-white text-sm font-normal leading-normal text-right">$200.00</p>
+</div>
+<div class="flex justify-between gap-x-6 py-2 border-t border-gray-200 dark:border-gray-700 mt-2">
+<p class="text-[#111318] dark:text-white text-base font-bold leading-normal">Total</p>
+<p class="text-primary text-base font-bold leading-normal text-right">$200.00</p>
+</div>
+</div>
+<div class="px-4 pt-8 pb-3">
+<h2 class="text-[#111318] dark:text-white tracking-light text-xl font-bold leading-tight text-left">Choose Your Payment Method</h2>
+</div>
+<div class="px-4 flex flex-col gap-4">
+<button class="w-full flex items-center justify-between p-4 border rounded-lg border-primary bg-primary/10 dark:bg-primary/20">
+<div class="flex items-center gap-4">
+<img alt="Flow logo" class="h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1fOBtYOsGhBZO87nOsp7GNoekmlA0Jl5DMzhiN0uTNSNv996JdGQ7-7ygoYOI30DTX3lgRXXBuGoOPrKlw2zhPoKiu3NMSKIhH4uWuMN-7daLrPUgLdNJJSMx43M4C5nQbN1cOiaisKTMKpt3o29IkXkSeUtyc8rlTKvFgWUGG3bn6K2iwO3F-jsBfTN2-rnAotZy2ROGDatjqh2h5otf0b_PNp6uvYqNY58p0ipdaWLYKWi_vN3_ZB1nMObd8IKd6LDbXY8H4t4"/>
+<span class="text-primary font-medium">Flow</span>
+</div>
+<div class="w-5 h-5 rounded-full border-2 border-primary bg-primary flex items-center justify-center">
+<div class="w-2 h-2 bg-white rounded-full"></div>
+</div>
+</button>
+<button class="w-full flex items-center justify-between p-4 border rounded-lg border-gray-300 dark:border-gray-700">
+<div class="flex items-center gap-4">
+<img alt="Webpay logo" class="h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTfRaPkmkqlLvya870JWtN7gHMhckUxlx7QyFVzs8veYsHHAu7vLioGI-jzspFFJF_c_5c_R6AzgvYP0cZuGzLOotJi7CAeDwffpgah9yI-7bWBMD001iqhZ2t3EfNr5ak-yuklpBuX52zYiqONLay174cXhbY_HhPI9aN0kBQ68A2z-bbIGy9gBV7Pmv7-7N5EY_RfOuEwro-XjOAMTMU4WNMf7tVXYjtXl-QmUcNTbFeXvVVJE430BMrrT6J1OWqPYfbJyNjpQ0"/>
+<span class="text-[#111318] dark:text-white font-medium">Webpay</span>
+</div>
+<div class="w-5 h-5 rounded-full border-2 border-gray-300 dark:border-gray-700"></div>
+</button>
+<button class="w-full flex items-center justify-between p-4 border rounded-lg border-gray-300 dark:border-gray-700">
+<div class="flex items-center gap-4">
+<img alt="Mercado Pago logo" class="h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvSZcZCYaSBqnZnJkc6kS1lVQF8eHx_3pelGYl79r-7x1K17e2oc3YaJhC4-eBKhs_VYkGWICwpd9EmMuA6GcKCbkMqbhUfxH6CpHN324OgOLtBE8gILflfYT1SIYDmSY2utPclYTv4oAt6C9GrRTdgDZIcfgCaDsUAyRJZ5g2KxDQ977wkzwiBkeVgXaRrZAkG1gacRP3M8iheKdvK-oWSJYgak2I8yfszmIZSqWcSC4EUW1peDVxiWYfZmiGr__U0P6gQACbGG0"/>
+<span class="text-[#111318] dark:text-white font-medium">Mercado Pago</span>
+</div>
+<div class="w-5 h-5 rounded-full border-2 border-gray-300 dark:border-gray-700"></div>
+</button>
+</div>
+<div class="flex items-start gap-4 p-4 mt-6">
+<input class="mt-1 form-checkbox h-5 w-5 rounded text-primary bg-gray-200 dark:bg-gray-700 border-gray-300 dark:border-gray-600 focus:ring-primary" id="terms" type="checkbox"/>
+<label class="text-[#616f89] dark:text-gray-400 text-sm" for="terms">
+            I have read and agree to the <a class="text-primary underline" href="#">Terms of Service</a> and <a class="text-primary underline" href="#">Cancellation Policy</a>.
+        </label>
+</div>
+<div class="flex items-center justify-center p-4 mt-auto bg-white dark:bg-background-dark border-t border-gray-200 dark:border-gray-800">
+<button class="w-full bg-primary text-white font-bold py-4 px-6 rounded-lg text-lg">
+            Proceed to Payment
+        </button>
+</div>
+</div>
+</body></html>
