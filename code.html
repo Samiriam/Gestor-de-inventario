@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 
-<html class="light" lang="en"><head>
+<html lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Secure Checkout</title>
+<title>Booking &amp; Ticket Policies</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
-<script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
     tailwind.config = {
       darkMode: "class",
       theme: {
         extend: {
           colors: {
             "primary": "#135bec",
-            "background-light": "#f6f6f8",
+            "background-light": "#F5F5F5",
             "background-dark": "#101622",
           },
           fontFamily: {
@@ -31,15 +33,12 @@
     }
   </script>
 <style>
-    body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-    }
     .material-symbols-outlined {
       font-variation-settings:
-      'FILL' 0,
-      'wght' 400,
-      'GRAD' 0,
-      'opsz' 24
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
     }
   </style>
 <style>
@@ -50,91 +49,90 @@
   </head>
 <body class="bg-background-light dark:bg-background-dark font-display">
 <div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
-<div class="flex items-center bg-white dark:bg-background-dark p-4 pb-2 justify-between">
-<div class="text-[#111318] dark:text-white flex size-12 shrink-0 items-center">
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10">
+<button class="text-black dark:text-white flex size-12 shrink-0 items-center justify-center">
 <span class="material-symbols-outlined">arrow_back</span>
-</div>
-<h2 class="text-[#111318] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-12">Secure Checkout</h2>
-</div>
-<div class="px-4 pt-6 pb-3">
-<h1 class="text-[#111318] dark:text-white tracking-light text-[32px] font-bold leading-tight text-left">Your Order Summary</h1>
-</div>
-<div class="flex flex-col gap-2 bg-white dark:bg-background-dark pt-2">
-<div class="flex items-center gap-4 bg-white dark:bg-background-dark px-4 min-h-[72px] py-2 justify-between">
-<div class="flex items-center gap-4">
-<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-14" data-alt="Superhero themed birthday room" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDaogWlFKSqABJEISk9t7xPeoaC9oZwCDRELQzFGXf7rOdjkp-Nb3odjMm0tQ9bRM0MQPQJGRvdWVdJch6EVbFCP54uWT0opW2-1W0Bb4g46bskQ27KBkKIQUHBATp_wFcJqi3CocEMBkaidGL8Vi2D9Ffkj7zjVVHZyGuh-KxColSc_2bHzHW1RvzIPZMX4NhZe2WwVoqHIubzq95vAaq07EkicPzHp4TcFUyDFW9fm5AEYB7fdKGobOoKE8p6pKe22GxxYi8Em_g");'></div>
-<div class="flex flex-col justify-center">
-<p class="text-[#111318] dark:text-white text-base font-medium leading-normal line-clamp-1">Birthday Room - Superhero Theme</p>
-<p class="text-[#616f89] dark:text-gray-400 text-sm font-normal leading-normal line-clamp-2">1</p>
-</div>
-</div>
-<div class="shrink-0">
-<p class="text-[#111318] dark:text-white text-base font-normal leading-normal">$150.00</p>
-</div>
-</div>
-<div class="flex items-center gap-4 bg-white dark:bg-background-dark px-4 min-h-[72px] py-2 justify-between">
-<div class="flex items-center gap-4">
-<div class="text-[#111318] dark:text-white flex items-center justify-center rounded-lg bg-[#f0f2f4] dark:bg-gray-800 shrink-0 size-12">
-<span class="material-symbols-outlined">confirmation_number</span>
-</div>
-<div class="flex flex-col justify-center">
-<p class="text-[#111318] dark:text-white text-base font-medium leading-normal line-clamp-1">Extra Child Tickets</p>
-<p class="text-[#616f89] dark:text-gray-400 text-sm font-normal leading-normal line-clamp-2">5</p>
-</div>
-</div>
-<div class="shrink-0">
-<p class="text-[#111318] dark:text-white text-base font-normal leading-normal">$50.00</p>
-</div>
-</div>
-</div>
-<div class="bg-white dark:bg-background-dark p-4">
-<div class="flex justify-between gap-x-6 py-2">
-<p class="text-[#616f89] dark:text-gray-400 text-sm font-normal leading-normal">Subtotal</p>
-<p class="text-[#111318] dark:text-white text-sm font-normal leading-normal text-right">$200.00</p>
-</div>
-<div class="flex justify-between gap-x-6 py-2 border-t border-gray-200 dark:border-gray-700 mt-2">
-<p class="text-[#111318] dark:text-white text-base font-bold leading-normal">Total</p>
-<p class="text-primary text-base font-bold leading-normal text-right">$200.00</p>
-</div>
-</div>
-<div class="px-4 pt-8 pb-3">
-<h2 class="text-[#111318] dark:text-white tracking-light text-xl font-bold leading-tight text-left">Choose Your Payment Method</h2>
-</div>
-<div class="px-4 flex flex-col gap-4">
-<button class="w-full flex items-center justify-between p-4 border rounded-lg border-primary bg-primary/10 dark:bg-primary/20">
-<div class="flex items-center gap-4">
-<img alt="Flow logo" class="h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1fOBtYOsGhBZO87nOsp7GNoekmlA0Jl5DMzhiN0uTNSNv996JdGQ7-7ygoYOI30DTX3lgRXXBuGoOPrKlw2zhPoKiu3NMSKIhH4uWuMN-7daLrPUgLdNJJSMx43M4C5nQbN1cOiaisKTMKpt3o29IkXkSeUtyc8rlTKvFgWUGG3bn6K2iwO3F-jsBfTN2-rnAotZy2ROGDatjqh2h5otf0b_PNp6uvYqNY58p0ipdaWLYKWi_vN3_ZB1nMObd8IKd6LDbXY8H4t4"/>
-<span class="text-primary font-medium">Flow</span>
-</div>
-<div class="w-5 h-5 rounded-full border-2 border-primary bg-primary flex items-center justify-center">
-<div class="w-2 h-2 bg-white rounded-full"></div>
-</div>
 </button>
-<button class="w-full flex items-center justify-between p-4 border rounded-lg border-gray-300 dark:border-gray-700">
-<div class="flex items-center gap-4">
-<img alt="Webpay logo" class="h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTfRaPkmkqlLvya870JWtN7gHMhckUxlx7QyFVzs8veYsHHAu7vLioGI-jzspFFJF_c_5c_R6AzgvYP0cZuGzLOotJi7CAeDwffpgah9yI-7bWBMD001iqhZ2t3EfNr5ak-yuklpBuX52zYiqONLay174cXhbY_HhPI9aN0kBQ68A2z-bbIGy9gBV7Pmv7-7N5EY_RfOuEwro-XjOAMTMU4WNMf7tVXYjtXl-QmUcNTbFeXvVVJE430BMrrT6J1OWqPYfbJyNjpQ0"/>
-<span class="text-[#111318] dark:text-white font-medium">Webpay</span>
+<h2 class="text-black dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Booking &amp; Ticket Policies</h2>
+<div class="w-12"></div>
 </div>
-<div class="w-5 h-5 rounded-full border-2 border-gray-300 dark:border-gray-700"></div>
-</button>
-<button class="w-full flex items-center justify-between p-4 border rounded-lg border-gray-300 dark:border-gray-700">
-<div class="flex items-center gap-4">
-<img alt="Mercado Pago logo" class="h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvSZcZCYaSBqnZnJkc6kS1lVQF8eHx_3pelGYl79r-7x1K17e2oc3YaJhC4-eBKhs_VYkGWICwpd9EmMuA6GcKCbkMqbhUfxH6CpHN324OgOLtBE8gILflfYT1SIYDmSY2utPclYTv4oAt6C9GrRTdgDZIcfgCaDsUAyRJZ5g2KxDQ977wkzwiBkeVgXaRrZAkG1gacRP3M8iheKdvK-oWSJYgak2I8yfszmIZSqWcSC4EUW1peDVxiWYfZmiGr__U0P6gQACbGG0"/>
-<span class="text-[#111318] dark:text-white font-medium">Mercado Pago</span>
+<div class="flex flex-col p-4 gap-4">
+<details class="flex flex-col rounded-lg bg-white dark:bg-zinc-800 px-4 py-2 group" open="">
+<summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
+<p class="text-black dark:text-white text-base font-medium leading-normal">Birthday Room Booking Policies</p>
+<div class="text-yellow-500 group-open:rotate-180 transition-transform">
+<span class="material-symbols-outlined">expand_more</span>
 </div>
-<div class="w-5 h-5 rounded-full border-2 border-gray-300 dark:border-gray-700"></div>
-</button>
+</summary>
+<div class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal pb-2 space-y-4">
+<div>
+<h3 class="font-semibold text-black dark:text-white mb-1">Reservations</h3>
+<p>To book a birthday room, a non-refundable deposit of 50% is required. The booking includes 2 hours of playtime, a dedicated party host, and standard decorations.</p>
 </div>
-<div class="flex items-start gap-4 p-4 mt-6">
-<input class="mt-1 form-checkbox h-5 w-5 rounded text-primary bg-gray-200 dark:bg-gray-700 border-gray-300 dark:border-gray-600 focus:ring-primary" id="terms" type="checkbox"/>
-<label class="text-[#616f89] dark:text-gray-400 text-sm" for="terms">
-            I have read and agree to the <a class="text-primary underline" href="#">Terms of Service</a> and <a class="text-primary underline" href="#">Cancellation Policy</a>.
-        </label>
+<div>
+<h3 class="font-semibold text-black dark:text-white mb-1">Payment</h3>
+<p>The remaining balance is due on the day of the party. We accept cash and credit cards.</p>
 </div>
-<div class="flex items-center justify-center p-4 mt-auto bg-white dark:bg-background-dark border-t border-gray-200 dark:border-gray-800">
-<button class="w-full bg-primary text-white font-bold py-4 px-6 rounded-lg text-lg">
-            Proceed to Payment
-        </button>
+<div>
+<h3 class="font-semibold text-black dark:text-white mb-1">Cancellations &amp; Rescheduling</h3>
+<ul class="list-disc list-inside space-y-1">
+<li>Cancellations made at least 14 days in advance will receive a credit for a future booking.</li>
+<li>No refunds for cancellations made within 14 days of the party.</li>
+<li>Rescheduling is subject to availability and must be requested at least 7 days prior to the original party date.</li>
+</ul>
 </div>
+<div>
+<h3 class="font-semibold text-black dark:text-white mb-1">Guest &amp; Capacity Rules</h3>
+<p>The birthday package includes up to 15 children. Additional children will be charged per head. A maximum of 30 people (children and adults) are allowed in the party room.</p>
+</div>
+</div>
+</details>
+<details class="flex flex-col rounded-lg bg-white dark:bg-zinc-800 px-4 py-2 group">
+<summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
+<p class="text-black dark:text-white text-base font-medium leading-normal">General Ticket Purchase Policies</p>
+<div class="text-yellow-500 group-open:rotate-180 transition-transform">
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</summary>
+<div class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal pb-2 space-y-4">
+<div>
+<h3 class="font-semibold text-black dark:text-white mb-1">Ticket Validity</h3>
+<p>Tickets are valid for the date and time specified at purchase. They are non-transferable.</p>
+</div>
+<div>
+<h3 class="font-semibold text-black dark:text-white mb-1">Refunds &amp; Exchanges</h3>
+<p>All ticket sales are final. We do not offer refunds or exchanges for purchased tickets. In case of unforeseen closure of the center, we will offer a voucher for a future visit. For more details, <a class="text-blue-500 dark:text-blue-400 hover:underline" href="#">contact support</a>.</p>
+</div>
+<div>
+<h3 class="font-semibold text-black dark:text-white mb-1">Entry Conditions</h3>
+<ul class="list-disc list-inside space-y-1">
+<li>All children must be accompanied by an adult.</li>
+<li>Socks are required for all guests entering the play area.</li>
+<li>No outside food or drinks are allowed, with the exception of birthday cakes for booked parties.</li>
+<li>PlayKids Linares is not responsible for lost or stolen items.</li>
+</ul>
+</div>
+</div>
+</details>
+</div>
+<footer class="flex flex-col gap-6 px-5 py-10 text-center @container mt-auto">
+<div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
+<a class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal min-w-40" href="#">Privacy Policy</a>
+<a class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal min-w-40" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-wrap justify-center gap-4">
+<a href="#">
+<div class="text-gray-600 dark:text-gray-400">
+<svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"><path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path></svg>
+</div>
+</a>
+<a href="#">
+<div class="text-gray-600 dark:text-gray-400">
+<svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"><path clip-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.012-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.08 2.525c.636-.247 1.363-.416 2.427-.465C9.53 2.013 9.884 2 12.315 2zm-1.002 11.833a4.833 4.833 0 101.621 0 4.833 4.833 0 00-1.621 0zM16.95 6.516a1.2 1.2 0 100 2.4 1.2 1.2 0 000-2.4z" fill-rule="evenodd"></path></svg>
+</div>
+</a>
+</div>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal">© 2023 PlayKids Linares. All Rights Reserved.</p>
+</footer>
 </div>
 </body></html>
